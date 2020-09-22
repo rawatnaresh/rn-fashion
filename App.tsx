@@ -9,11 +9,6 @@ import {Onboarding} from './src/Authentication/';
 
 const AuthenticationStack = createStackNavigator();
 
-// const fonts = {
-//   'SFProText-Bold': require('./assets/fonts/sf-ui-display-bold.otf'),
-//   'SFProText-Semibold': require('./assets/fonts/sf-ui-display-semibold.otf'),
-//   'SFProText-regular': require('./assets/fonts/sf-ui-display-display.otf'),
-// };
 const AuthenticationNavigator = () => (
   <AuthenticationStack.Navigator headerMode={'none'}>
     <AuthenticationStack.Screen name="Onboarding" component={Onboarding} />
