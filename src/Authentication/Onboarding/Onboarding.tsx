@@ -1,15 +1,17 @@
 import React, {useRef} from 'react';
-import {View, StyleSheet, Dimensions} from 'react-native';
+import {View, StyleSheet, Dimensions, Image} from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   useAnimatedScrollHandler,
+  interpolate,
 } from 'react-native-reanimated';
 
 import {interpolateColor} from 'react-native-redash/lib/module/';
 
 import Slide, {SLIDE_HEIGHT} from './Slide';
 import Subslide from './Subslide';
+import SliderImage from './SliderImage';
 import {Dot} from '../../components';
 
 const {width} = Dimensions.get('window');
@@ -49,6 +51,11 @@ const slides = [
     subtitle: 'Find Your Outfits',
     description:
       "Confused about your outfits? Don't worry find the best oufit here",
+    picture: {
+      src: require('../../images/2.png'),
+      width: 2513,
+      height: 3583,
+    },
   },
   {
     title: 'Playfull',
@@ -56,6 +63,11 @@ const slides = [
     subtitle: 'Hear it First, Wear it First',
     description:
       'Hating the clothes in your wardrobe? Explore hundreds of ourfit ideas',
+    picture: {
+      src: require('../../images/1.png'),
+      width: 2513,
+      height: 3583,
+    },
   },
   {
     title: 'Excentric',
@@ -63,6 +75,11 @@ const slides = [
     subtitle: 'Your Style, Your Way',
     description:
       'Create your individuals & unique style and look amazing everyday',
+    picture: {
+      src: require('../../images/3.png'),
+      width: 2513,
+      height: 3583,
+    },
   },
   {
     title: 'Funky',
@@ -70,6 +87,11 @@ const slides = [
     subtitle: 'Look Good, Feel Good',
     description:
       'Discover the best trends in fashion and explore your personality',
+    picture: {
+      src: require('../../images/4.png'),
+      width: 2513,
+      height: 3583,
+    },
   },
 ];
 
@@ -110,6 +132,16 @@ const Onboarding = () => {
   return (
     <View style={styles.container}>
       <Animated.View style={[styles.slider, backgroundStyles]}>
+        {slides.map(({picture}, index) => {
+          return (
+            <SliderImage
+              key={index}
+              index={index}
+              scrollOffset={scrollOffset}
+              picture={picture}
+            />
+          );
+        })}
         <Animated.ScrollView
           horizontal
           snapToInterval={width}
@@ -119,8 +151,13 @@ const Onboarding = () => {
           onScroll={scrollHandler}
           scrollEventThrottle={1}
           ref={scrollRef}>
-          {slides.map(({title}, index) => (
-            <Slide label={title} key={index} right={!!(index % 2)} />
+          {slides.map(({title, picture}, index) => (
+            <Slide
+              label={title}
+              key={index}
+              right={!!(index % 2)}
+              picture={picture}
+            />
           ))}
         </Animated.ScrollView>
       </Animated.View>
