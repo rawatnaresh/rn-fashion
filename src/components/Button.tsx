@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import {RectButton} from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({

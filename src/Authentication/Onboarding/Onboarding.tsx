@@ -10,6 +10,7 @@ import {interpolateColor} from 'react-native-redash/lib/module/';
 
 import Slide, {SLIDE_HEIGHT} from './Slide';
 import Subslide from './Subslide';
+import {Dot} from '../../components';
 
 const {width} = Dimensions.get('window');
 const BORDER_RADIUS = 75;
@@ -30,7 +31,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     borderTopLeftRadius: BORDER_RADIUS,
+  },
+  pagination: {
+    ...StyleSheet.absoluteFillObject,
+    flex: 1,
+    top: 12,
+    height: 8,
     flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 
@@ -78,6 +86,15 @@ const Onboarding = () => {
     return {backgroundColor};
   });
 
+  const bottomBackgroundStyle = useAnimatedStyle(() => {
+    const backgroundColor = interpolateColor(
+      scrollOffset.value,
+      [0, width, width * 2, width * 3],
+      ['#BFEAF5', '#BEECC4', '#FFE4D9', '#FFDDDD']
+    );
+    return {backgroundColor};
+  });
+
   const scrollHandler = useAnimatedScrollHandler({
     onScroll: (event) => {
       scrollOffset.value = event.contentOffset.x;
@@ -109,34 +126,41 @@ const Onboarding = () => {
       </Animated.View>
       <View style={styles.footer}>
         <Animated.View
-          style={[StyleSheet.absoluteFillObject, backgroundStyles]}
+          style={[StyleSheet.absoluteFillObject, bottomBackgroundStyle]}
         />
 
-        <Animated.View
-          style={[
-            styles.footerContent,
-            {
-              width: width * slides.length,
-              flex: 1,
-            },
-            transfromStyle,
-          ]}>
-          {slides.map(({subtitle, description}, index) => (
-            <Subslide
-              onPress={() => {
-                if (scrollRef.current) {
-                  scrollRef.current
-                    .getNode()
-                    .scrollTo({x: width * (index + 1), animated: true});
-                }
-              }}
-              key={index}
-              last={index === slides.length - 1}
-              x={scrollOffset}
-              {...{subtitle, description}}
-            />
-          ))}
-        </Animated.View>
+        <View style={[styles.footerContent]}>
+          <Animated.View style={styles.pagination}>
+            {slides.map((_, index) => (
+              <Dot key={index} scrollOffset={scrollOffset} index={index} />
+            ))}
+          </Animated.View>
+          <Animated.View
+            style={[
+              {
+                flex: 1,
+                flexDirection: 'row',
+                width: width * slides.length,
+              },
+              transfromStyle,
+            ]}>
+            {slides.map(({subtitle, description}, index) => (
+              <Subslide
+                onPress={() => {
+                  if (scrollRef.current) {
+                    scrollRef.current
+                      .getNode()
+                      .scrollTo({x: width * (index + 1), animated: true});
+                  }
+                }}
+                key={index}
+                last={index === slides.length - 1}
+                x={scrollOffset}
+                {...{subtitle, description}}
+              />
+            ))}
+          </Animated.View>
+        </View>
       </View>
     </View>
   );

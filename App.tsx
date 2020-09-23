@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Onboarding} from './src/Authentication/';
+import Test from './Test';
 
 const AuthenticationStack = createStackNavigator();
 
