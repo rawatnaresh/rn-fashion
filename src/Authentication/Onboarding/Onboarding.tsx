@@ -1,10 +1,9 @@
 import React, {useRef} from 'react';
-import {View, StyleSheet, Dimensions, Image} from 'react-native';
+import {View, StyleSheet, Dimensions} from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   useAnimatedScrollHandler,
-  interpolate,
 } from 'react-native-reanimated';
 
 import {interpolateColor} from 'react-native-redash/lib/module/';
@@ -12,10 +11,9 @@ import {interpolateColor} from 'react-native-redash/lib/module/';
 import Slide, {SLIDE_HEIGHT} from './Slide';
 import Subslide from './Subslide';
 import SliderImage from './SliderImage';
-import {Dot} from '../../components';
+import {Dot, Theme} from '../../components';
 
 const {width} = Dimensions.get('window');
-const BORDER_RADIUS = 75;
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +22,7 @@ const styles = StyleSheet.create({
   },
   slider: {
     height: SLIDE_HEIGHT,
-    borderBottomRightRadius: BORDER_RADIUS,
+    borderBottomRightRadius: Theme.borderRadii.xl,
   },
   footer: {
     flex: 1,
@@ -32,7 +30,7 @@ const styles = StyleSheet.create({
   footerContent: {
     flex: 1,
     backgroundColor: 'white',
-    borderTopLeftRadius: BORDER_RADIUS,
+    borderTopLeftRadius: Theme.borderRadii.xl,
   },
   pagination: {
     ...StyleSheet.absoluteFillObject,
@@ -95,7 +93,7 @@ const slides = [
   },
 ];
 
-const Onboarding = () => {
+const Onboarding = ({navigation}) => {
   const scrollRef = useRef<Animated.ScrollView>(null);
   const scrollOffset = useSharedValue(0);
 
@@ -151,13 +149,8 @@ const Onboarding = () => {
           onScroll={scrollHandler}
           scrollEventThrottle={1}
           ref={scrollRef}>
-          {slides.map(({title, picture}, index) => (
-            <Slide
-              label={title}
-              key={index}
-              right={!!(index % 2)}
-              picture={picture}
-            />
+          {slides.map(({title}, index) => (
+            <Slide label={title} key={index} right={!!(index % 2)} />
           ))}
         </Animated.ScrollView>
       </Animated.View>
@@ -181,21 +174,25 @@ const Onboarding = () => {
               },
               transfromStyle,
             ]}>
-            {slides.map(({subtitle, description}, index) => (
-              <Subslide
-                onPress={() => {
-                  if (scrollRef.current) {
-                    scrollRef.current
-                      .getNode()
-                      .scrollTo({x: width * (index + 1), animated: true});
-                  }
-                }}
-                key={index}
-                last={index === slides.length - 1}
-                x={scrollOffset}
-                {...{subtitle, description}}
-              />
-            ))}
+            {slides.map(({subtitle, description}, index) => {
+              const last = index === slides.length - 1;
+              return (
+                <Subslide
+                  onPress={() => {
+                    if (last) {
+                      navigation.navigate('Welcome');
+                    } else {
+                      scrollRef.current
+                        ?.getNode()
+                        .scrollTo({x: width * (index + 1), animated: true});
+                    }
+                  }}
+                  key={index}
+                  x={scrollOffset}
+                  {...{subtitle, description, last}}
+                />
+              );
+            })}
           </Animated.View>
         </View>
       </View>
