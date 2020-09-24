@@ -6,7 +6,7 @@ import Animated, {
   useAnimatedStyle,
 } from 'react-native-reanimated';
 const {width} = Dimensions.get('window');
-const BORDER_RADIUS = 75;
+import {Theme} from '../../components';
 
 interface DotProps {
   index: number;
@@ -21,13 +21,13 @@ const styles = StyleSheet.create({
   underlay: {
     ...StyleSheet.absoluteFillObject,
     justifyContent: 'flex-end',
-    borderBottomRightRadius: BORDER_RADIUS,
+    borderBottomRightRadius: Theme.borderRadii.xl,
   },
   picture: {
     ...StyleSheet.absoluteFillObject,
     width: undefined,
     height: undefined,
-    borderBottomRightRadius: BORDER_RADIUS,
+    borderBottomRightRadius: Theme.borderRadii.xl,
   },
 });
 const SliderImage = ({index, scrollOffset, picture}: DotProps) => {
