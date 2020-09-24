@@ -93,7 +93,7 @@ const slides = [
   },
 ];
 
-const Onboarding = () => {
+const Onboarding = ({navigation}) => {
   const scrollRef = useRef<Animated.ScrollView>(null);
   const scrollOffset = useSharedValue(0);
 
@@ -174,21 +174,25 @@ const Onboarding = () => {
               },
               transfromStyle,
             ]}>
-            {slides.map(({subtitle, description}, index) => (
-              <Subslide
-                onPress={() => {
-                  if (scrollRef.current) {
-                    scrollRef.current
-                      .getNode()
-                      .scrollTo({x: width * (index + 1), animated: true});
-                  }
-                }}
-                key={index}
-                last={index === slides.length - 1}
-                x={scrollOffset}
-                {...{subtitle, description}}
-              />
-            ))}
+            {slides.map(({subtitle, description}, index) => {
+              const last = index === slides.length - 1;
+              return (
+                <Subslide
+                  onPress={() => {
+                    if (last) {
+                      navigation.navigate('Welcome');
+                    } else {
+                      scrollRef.current
+                        ?.getNode()
+                        .scrollTo({x: width * (index + 1), animated: true});
+                    }
+                  }}
+                  key={index}
+                  x={scrollOffset}
+                  {...{subtitle, description, last}}
+                />
+              );
+            })}
           </Animated.View>
         </View>
       </View>
