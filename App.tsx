@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-// import {View} from 'react-native';
+import {ThemeProvider} from '@shopify/restyle';
+import {Theme} from './src/components';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -17,8 +18,10 @@ const AuthenticationNavigator = () => (
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <AuthenticationNavigator />
-    </NavigationContainer>
+    <ThemeProvider theme={Theme}>
+      <NavigationContainer>
+        <AuthenticationNavigator />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }

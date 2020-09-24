@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, StyleSheet, Text, Dimensions} from 'react-native';
+import {View, StyleSheet, Dimensions} from 'react-native';
+import {Text} from '../../components';
 
 const {width, height} = Dimensions.get('window');
 export const SLIDE_HEIGHT = 0.61 * height;
@@ -7,12 +8,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: width,
-  },
-  title: {
-    fontSize: 80,
-    color: 'white',
-    textAlign: 'center',
-    lineHeight: 80,
   },
   titleContainer: {
     height: 100,
@@ -33,7 +28,7 @@ const Slide = ({label, right}: SlideProps) => {
   return (
     <View style={styles.container}>
       <View style={[styles.titleContainer, {transform}]}>
-        <Text style={styles.title}>{label}</Text>
+        <Text variant={'hero'}>{label}</Text>
       </View>
     </View>
   );
