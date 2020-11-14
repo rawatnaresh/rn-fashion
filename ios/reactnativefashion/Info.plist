@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>SplashScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -66,17 +66,6 @@
 		</dict>
 	</array>
 	<key>UIAppFonts</key>
-	<array>
-		<string>SF-Pro-Display-Black.otf</string>
-		<string>SF-Pro-Display-BlackItalic.otf</string>
-		<string>SF-Pro-Display-Bold.otf</string>
-		<string>SF-Pro-Display-BoldItalic.otf</string>
-		<string>SF-Pro-Display-Heavy.otf</string>
-		<string>SF-Pro-Display-HeavyItalic.otf</string>
-		<string>SF-Pro-Display-Light.otf</string>
-		<string>SF-Pro-Display-LightItalic.otf</string>
-		<string>SF-Pro-Display-Medium.otf</string>
-		<string>SF-Pro-Display-MediumItalic.otf</string>
-	</array>
+	<array/>
 </dict>
 </plist>

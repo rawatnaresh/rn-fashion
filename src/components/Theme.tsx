@@ -43,18 +43,18 @@ const theme = createTheme({
       color: 'white',
       textAlign: 'center',
       lineHeight: 80,
-      fontFamily: 'SF-Pro-Display-Bold',
+      // fontFamily: 'SF-Pro-Display-Bold',
     },
     title1: {
       fontSize: 28,
       color: 'title',
-      fontFamily: 'SF-Pro-Display-Medium',
+      // fontFamily: 'SF-Pro-Display-Medium',
     },
     title2: {
       fontSize: 24,
       lineHeight: 30,
       color: 'title',
-      fontFamily: 'SF-Pro-Display-Medium',
+      // fontFamily: 'SF-Pro-Display-Medium',
     },
     body: {
       fontSize: 16,
@@ -65,7 +65,7 @@ const theme = createTheme({
       fontSize: 15,
       lineHeight: 24,
       color: 'text',
-      fontFamily: 'SF-Pro-Display-Light',
+      // fontFamily: 'SF-Pro-Display-Light',
     },
   },
 });

@@ -14,21 +14,11 @@
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-reactnativefashion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-reactnativefashion.a */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		BA01C6782D2D49ABA2FC8F73 /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 745D4CD940BE450B9B9EE474 /* SF-Pro-Display-Black.otf */; };
-		CDB6AC31A12A4ADBA5170343 /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74C6171E1F484FC0A636EE1B /* SF-Pro-Display-BlackItalic.otf */; };
-		B795F0AD5A734724BD94FA68 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 669A57CA8DEB44399CB693DD /* SF-Pro-Display-Bold.otf */; };
-		340F539B83ED4ED2BD485948 /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73820FF7C78641428961C21E /* SF-Pro-Display-BoldItalic.otf */; };
-		8E1436EE56C5467CAB62A6C4 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 72CE71D8C0D24437A8ED7C8B /* SF-Pro-Display-Heavy.otf */; };
-		296C4B3BAA6F4740AF1342C3 /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F7BA6586E3C467CBEA9C065 /* SF-Pro-Display-HeavyItalic.otf */; };
-		777850C781B943F8BCAA98D5 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 498044D1919F4F528A9FBC0E /* SF-Pro-Display-Light.otf */; };
-		BCE7B74433A54C738125A430 /* SF-Pro-Display-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77FA80F3C3E94EF4A9923115 /* SF-Pro-Display-LightItalic.otf */; };
-		87612176D2F24BE7B4E9F5ED /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5DD31CF63B3B4F2881B275D7 /* SF-Pro-Display-Medium.otf */; };
-		CAE30E540A424AD3AE7F4DB1 /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 97E035DDE2344EA3820A3BC1 /* SF-Pro-Display-MediumItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* reactnativefashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reactnativefashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* reactnativefashion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = reactnativefashion.app; path = fashion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = reactnativefashion/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = reactnativefashion/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,16 +32,6 @@
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		745D4CD940BE450B9B9EE474 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-Black.otf"; path = "../assets/fonts/SF-Pro-Display-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		74C6171E1F484FC0A636EE1B /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-BlackItalic.otf"; path = "../assets/fonts/SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		669A57CA8DEB44399CB693DD /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-Bold.otf"; path = "../assets/fonts/SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		73820FF7C78641428961C21E /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-BoldItalic.otf"; path = "../assets/fonts/SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		72CE71D8C0D24437A8ED7C8B /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-Heavy.otf"; path = "../assets/fonts/SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7F7BA6586E3C467CBEA9C065 /* SF-Pro-Display-HeavyItalic.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-HeavyItalic.otf"; path = "../assets/fonts/SF-Pro-Display-HeavyItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		498044D1919F4F528A9FBC0E /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-Light.otf"; path = "../assets/fonts/SF-Pro-Display-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		77FA80F3C3E94EF4A9923115 /* SF-Pro-Display-LightItalic.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-LightItalic.otf"; path = "../assets/fonts/SF-Pro-Display-LightItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5DD31CF63B3B4F2881B275D7 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-Medium.otf"; path = "../assets/fonts/SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		97E035DDE2344EA3820A3BC1 /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; name = "SF-Pro-Display-MediumItalic.otf"; path = "../assets/fonts/SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +60,13 @@
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
 			);
 			name = reactnativefashion;
+			sourceTree = "<group>";
+		};
+		2B0A7D899DBC4570B96C4D2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -139,24 +126,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		2B0A7D899DBC4570B96C4D2C /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				745D4CD940BE450B9B9EE474 /* SF-Pro-Display-Black.otf */,
-				74C6171E1F484FC0A636EE1B /* SF-Pro-Display-BlackItalic.otf */,
-				669A57CA8DEB44399CB693DD /* SF-Pro-Display-Bold.otf */,
-				73820FF7C78641428961C21E /* SF-Pro-Display-BoldItalic.otf */,
-				72CE71D8C0D24437A8ED7C8B /* SF-Pro-Display-Heavy.otf */,
-				7F7BA6586E3C467CBEA9C065 /* SF-Pro-Display-HeavyItalic.otf */,
-				498044D1919F4F528A9FBC0E /* SF-Pro-Display-Light.otf */,
-				77FA80F3C3E94EF4A9923115 /* SF-Pro-Display-LightItalic.otf */,
-				5DD31CF63B3B4F2881B275D7 /* SF-Pro-Display-Medium.otf */,
-				97E035DDE2344EA3820A3BC1 /* SF-Pro-Display-MediumItalic.otf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -221,16 +190,6 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				BA01C6782D2D49ABA2FC8F73 /* SF-Pro-Display-Black.otf in Resources */,
-				CDB6AC31A12A4ADBA5170343 /* SF-Pro-Display-BlackItalic.otf in Resources */,
-				B795F0AD5A734724BD94FA68 /* SF-Pro-Display-Bold.otf in Resources */,
-				340F539B83ED4ED2BD485948 /* SF-Pro-Display-BoldItalic.otf in Resources */,
-				8E1436EE56C5467CAB62A6C4 /* SF-Pro-Display-Heavy.otf in Resources */,
-				296C4B3BAA6F4740AF1342C3 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
-				777850C781B943F8BCAA98D5 /* SF-Pro-Display-Light.otf in Resources */,
-				BCE7B74433A54C738125A430 /* SF-Pro-Display-LightItalic.otf in Resources */,
-				87612176D2F24BE7B4E9F5ED /* SF-Pro-Display-Medium.otf in Resources */,
-				CAE30E540A424AD3AE7F4DB1 /* SF-Pro-Display-MediumItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +284,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -339,12 +299,11 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.fashion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.fashion;
 				PRODUCT_NAME = fashion;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
-				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 			};
 			name = Debug;
 		};
@@ -354,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = reactnativefashion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -363,11 +323,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.fashion";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.fashion;
 				PRODUCT_NAME = fashion;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
-				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 			};
 			name = Release;
 		};
@@ -399,6 +358,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -428,7 +388,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 			};
 			name = Debug;
 		};
@@ -460,6 +419,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -482,7 +442,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				CODE_SIGN_ENTITLEMENTS = reactnativefashion/fashion.entitlements;
 			};
 			name = Release;
 		};
